@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/components/header/header/header.component';
 import { FooterComponent } from './core/components/footer/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SliderComponent } from './shop/components/slider/slider.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
