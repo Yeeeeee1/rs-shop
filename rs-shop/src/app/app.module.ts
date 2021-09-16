@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/components/header/header/header.component';
 import { FooterComponent } from './core/components/footer/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SliderComponent } from './shop/components/slider/slider.component';
+import { SliderComponent } from './shop/components/main-page/slider/slider.component';
 import { FormsModule } from '@angular/forms';
+import { CatalogComponent } from './shop/components/catalog/catalog.component';
+import { MainPageComponent } from './shop/components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     SliderComponent,
+    CatalogComponent,
+    MainPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
