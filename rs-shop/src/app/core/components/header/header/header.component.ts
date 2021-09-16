@@ -14,7 +14,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ipSub: Subscription | null = new Subscription();
 
   ngOnInit(): void {
-    this.ipService.getApi().subscribe((data) => (this.city = data.city));
+    this.ipService.getApi().subscribe((data) => {
+      console.log(data);
+      this.city = data.city;
+    });
   }
 
   ngOnDestroy(): void {

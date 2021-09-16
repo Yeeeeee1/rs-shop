@@ -1,3 +1,50 @@
 <header>
   {{ city }}
+
+  <div class="header-contacts-wrapper">
+    <div class="header-contacts">
+      <img src="../../../../../assets/viber-icon.png" alt="viber" />
+      <a href="viber://chat?number=%2B+375295687898">Viber</a>
+      <img src="../../../../../assets/velcom-icon.png" alt="telephone-number" />
+      <a href="tel:+375295687898">+375 29 568 7898</a>
+    </div>
+    <div class="soc-nets">
+      <div>
+        <a href="https://instagram"
+          ><img
+            src="../../../../../assets/intsagram-icon.png"
+            alt="instagram"
+          />Instagram</a
+        >
+      </div>
+      <div>
+        <a href="https://twitter"
+          ><img
+            src="../../../../../assets/twitter-icon.png"
+            alt="twitter"
+          />Twitter</a
+        >
+      </div>
+    </div>
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Ещё
+      </button>
+      <div ngbDropdownMenu gray-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>+375 25 997 9955</button>
+        <button ngbDropdownItem>Telegram</button>
+        <button ngbDropdownItem>Написать нам</button>
+        <hr />
+        <p>Контакты</p>
+      </div>
+    </div>
+    <div class="work-time">
+      <p>Контакт-центр</p>
+      <p>с 8.00 до 20.00</p>
+    </div>
+  </div>
 </header>
