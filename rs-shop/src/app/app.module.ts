@@ -10,6 +10,7 @@ import { SliderComponent } from './shop/components/main-page/slider/slider.compo
 import { FormsModule } from '@angular/forms';
 import { CatalogComponent } from './shop/components/catalog/catalog.component';
 import { MainPageComponent } from './shop/components/main-page/main-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { MainPageComponent } from './shop/components/main-page/main-page.compone
     CatalogComponent,
     MainPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    RouterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

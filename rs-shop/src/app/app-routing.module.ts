@@ -8,6 +8,7 @@ import { CatalogService } from './shop/services/catalog.service';
 const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   { path: '', component: MainPageComponent },
+  { path: 'items/:id', component: CatalogComponent },
 ];
 
 @NgModule({
