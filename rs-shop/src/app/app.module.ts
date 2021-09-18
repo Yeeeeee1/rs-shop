@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { CatalogComponent } from './shop/components/catalog/catalog.component';
 import { MainPageComponent } from './shop/components/main-page/main-page.component';
 import { RouterModule } from '@angular/router';
+import { CatalogCardComponent } from './shop/components/catalog-card/catalog-card.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
     SliderComponent,
     CatalogComponent,
     MainPageComponent,
+    CatalogCardComponent,
   ],
   imports: [
     BrowserModule,
