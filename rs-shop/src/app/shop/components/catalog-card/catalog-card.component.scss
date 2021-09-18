@@ -1,0 +1,17 @@
+.picsum-img-wrapper {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#carousel {
+  width: 70%;
+  height: 400px;
+}
