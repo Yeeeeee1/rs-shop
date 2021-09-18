@@ -1,0 +1,13 @@
+<div *ngFor="let good of goods">
+  <p>{{ good.name }}</p>
+  <ngb-carousel id="carousel" #carousel [interval]="3000">
+    <ng-template ngbSlide *ngFor="let img of good.imageUrls; index as i">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <p>{{ good.description }}</p>
+  <button [disabled]="good.isFavourite">В избранное</button>
+  <button [disabled]="good.isInCart">В корзину</button>
+</div>
