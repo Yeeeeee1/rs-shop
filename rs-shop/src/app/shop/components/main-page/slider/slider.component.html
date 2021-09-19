@@ -1,4 +1,4 @@
-<ngb-carousel #carousel [interval]="3000">
+<ngb-carousel id="carousel" #carousel [interval]="3000">
   <ng-template ngbSlide *ngFor="let img of [1, 2, 3]; index as i">
     <div class="picsum-img-wrapper">
       <img [src]="'../../../../assets/poster-' + (i + 1) + '.jpeg'" />
