@@ -3,7 +3,21 @@
 @import "~bootstrap/scss/bootstrap";
 @import "styles/scafolding.scss";
 
+html {
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
