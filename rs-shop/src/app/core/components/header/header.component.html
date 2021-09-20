@@ -3,7 +3,7 @@
     <div>
       <div ngbDropdown class="d-inline-block">
         <button
-          class="btn btn-outline-info"
+          class="btn btn-outline-info shadow-none"
           id="dropdownBasic1"
           ngbDropdownToggle
         >
@@ -75,7 +75,9 @@
     <a routerLink=""
       ><img src="../../../../assets/21vek-icon.png" alt="shop-logo"
     /></a>
-    <a routerLink="catalog" class="text-info">Каталог</a>
+    <a routerLink="catalog">
+      <button class="btn btn-outline-info">Каталог</button>
+    </a>
     <input
       type="search"
       name="search"
@@ -84,8 +86,12 @@
       (input)="search($event)"
     />
 
-    <a routerLink="cart" class="text-info">Корзина</a>
-    <a routerLink="favourite" class="text-info">Избранное</a>
+    <a routerLink="cart">
+      <button class="btn btn-outline-info">Корзина</button>
+    </a>
+    <a routerLink="favourite">
+      <button class="btn btn-outline-info">Избранное</button>
+    </a>
 
     <ng-template #content let-modal>
       <div class="modal-header">
@@ -122,13 +128,49 @@
     </div>
 
     <button
-      class="btn btn-outline-info mb-2 mr-2"
+      class="btn btn-outline-info"
       (click)="openSm(content)"
       *ngIf="!name; else signOut"
     >
       Войти
     </button>
   </nav>
+
+  <ul class="popular">
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/refrigerators">Холодильники</a>
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/washing_machines"
+        >Стиральные машины</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/notebooks">Ноутбуки</a>
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/mobiles">Смартфоны</a>
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/mattressess">Матрасы</a>
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/interior_doors"
+        >Межкомнатные двери</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/cushioned_furniture">Диваны</a>
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/vegetable_dryers"
+        >Сушилки для овощей</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/tires">Шины</a>
+    </li>
+  </ul>
 </header>
 
 <ng-template #signOut>
