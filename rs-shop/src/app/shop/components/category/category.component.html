@@ -1,0 +1,11 @@
+<app-catalog></app-catalog>
+
+<div
+  *ngFor="let currentGoods of goods"
+  class="good-card"
+  (click)="getCard(currentGoods.id)"
+>
+  <img [src]="currentGoods.imageUrls[0]" alt="good-poster" />
+  <p>{{ currentGoods.name }}</p>
+  <p>{{ currentGoods.description }}</p>
+</div>

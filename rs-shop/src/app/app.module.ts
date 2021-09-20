@@ -13,6 +13,7 @@ import { CatalogComponent } from './shop/components/catalog/catalog.component';
 import { MainPageComponent } from './shop/components/main-page/main-page.component';
 import { RouterModule } from '@angular/router';
 import { CatalogCardComponent } from './shop/components/catalog-card/catalog-card.component';
+import { CategoryComponent } from './shop/components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CatalogCardComponent } from './shop/components/catalog-card/catalog-car
     CatalogComponent,
     MainPageComponent,
     CatalogCardComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,
