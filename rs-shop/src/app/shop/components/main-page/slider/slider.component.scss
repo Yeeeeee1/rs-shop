@@ -9,6 +9,14 @@
 }
 
 #carousel {
-  width: 70%;
+  width: 600px;
   height: 400px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px 0 10px 0;
 }
