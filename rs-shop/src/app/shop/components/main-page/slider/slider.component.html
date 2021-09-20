@@ -1,7 +1,11 @@
-<ngb-carousel id="carousel" #carousel [interval]="3000">
-  <ng-template ngbSlide *ngFor="let img of [1, 2, 3]; index as i">
-    <div class="picsum-img-wrapper">
-      <img [src]="'../../../../assets/poster-' + (i + 1) + '.jpeg'" />
-    </div>
-  </ng-template>
-</ngb-carousel>
+<div class="carousel">
+  <ngb-carousel id="carousel" #carousel [interval]="3000">
+    <ng-template ngbSlide *ngFor="let img of [1, 2, 3, 4, 5, 6]; index as i">
+      <div class="picsum-img-wrapper">
+        <a [routerLink]="itemsLinksArr[i]">
+          <img [src]="'../../../../assets/poster-' + (i + 1) + '.jpeg'"
+        /></a>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
