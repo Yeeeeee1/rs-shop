@@ -15,6 +15,7 @@ export class CatalogCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    console.log(this.route.url.subscribe((data: any) => console.log(data)));
     this.route.params.subscribe((param) => {
       const id = param.id;
 

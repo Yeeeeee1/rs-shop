@@ -1,11 +1,6 @@
-.good-card {
-  width: 500px;
-  height: 500px;
-  box-shadow: 0px 0px 3px 0px black;
-  margin: 25px;
-
-  img {
-    width: 100px;
-    height: 200px;
-  }
+.catalog {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

@@ -13,6 +13,9 @@ import { CatalogComponent } from './shop/components/catalog/catalog.component';
 import { MainPageComponent } from './shop/components/main-page/main-page.component';
 import { RouterModule } from '@angular/router';
 import { CatalogCardComponent } from './shop/components/catalog-card/catalog-card.component';
+import { CategoryComponent } from './shop/components/category/category.component';
+import { PricePipe } from './shop/components/category/pipes/price.pipe';
+import { SearchWordPipe } from './shop/components/category/pipes/search-word.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { CatalogCardComponent } from './shop/components/catalog-card/catalog-car
     CatalogComponent,
     MainPageComponent,
     CatalogCardComponent,
+    CategoryComponent,
+    PricePipe,
+    SearchWordPipe,
   ],
   imports: [
     BrowserModule,

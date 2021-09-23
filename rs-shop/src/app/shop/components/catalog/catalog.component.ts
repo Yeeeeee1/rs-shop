@@ -36,16 +36,6 @@ export class CatalogComponent implements OnInit {
   }
 
   getGoodsByCategory(categoryName: string, subcategoryName: string): void {
-    console.log(name);
-    this.catalogService
-      .getGoodsByCategory(categoryName, subcategoryName)
-      .subscribe((data: any) => {
-        this.goods = data;
-        console.log(data);
-      });
-  }
-
-  getCard(id: string): void {
-    this.router.navigate(['items', id]);
+    this.router.navigate(['category', categoryName, subcategoryName]);
   }
 }
