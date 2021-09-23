@@ -10,6 +10,9 @@ import { CatalogService } from '../../services/catalog.service';
 })
 export class CategoryComponent implements OnInit {
   goods: any = [];
+  flag = false;
+  searchWord = '';
+
   constructor(
     private router: ActivatedRoute,
     private route: Router,
@@ -34,5 +37,10 @@ export class CategoryComponent implements OnInit {
 
   getCard(id: string): void {
     this.route.navigate(['items', id]);
+  }
+
+  notGood(e: Event): void {
+    e.stopPropagation();
+    alert('Нет товара!');
   }
 }

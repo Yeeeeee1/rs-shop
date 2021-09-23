@@ -14,6 +14,8 @@ import { MainPageComponent } from './shop/components/main-page/main-page.compone
 import { RouterModule } from '@angular/router';
 import { CatalogCardComponent } from './shop/components/catalog-card/catalog-card.component';
 import { CategoryComponent } from './shop/components/category/category.component';
+import { PricePipe } from './shop/components/category/pipes/price.pipe';
+import { SearchWordPipe } from './shop/components/category/pipes/search-word.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CategoryComponent } from './shop/components/category/category.component
     MainPageComponent,
     CatalogCardComponent,
     CategoryComponent,
+    PricePipe,
+    SearchWordPipe,
   ],
   imports: [
     BrowserModule,

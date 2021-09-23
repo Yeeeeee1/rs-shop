@@ -6,9 +6,11 @@
     alt="hot-item"
   />
   <div class="breadcrumbs">
-    <a routerLink="/category">category</a>
+    <a routerLink="/catalog">category</a>
     <p>></p>
-    <a [routerLink]="'/category/' + good.category">{{ good.category }}</a>
+    <a [routerLink]="'/category/' + good.category + '/' + good.subCategory">{{
+      good.category
+    }}</a>
     <p>></p>
     <p>{{ good.name }}</p>
   </div>
