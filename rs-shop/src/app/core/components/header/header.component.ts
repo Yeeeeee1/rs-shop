@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { IpService } from 'src/app/core/services/ip.service';
+import { CartService } from 'src/app/shop/services/cart.service';
 import { CatalogService } from 'src/app/shop/services/catalog.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(
     private ipService: IpService,
     private modalService: NgbModal,
-    private catalogService: CatalogService
+    private catalogService: CatalogService,
+    private cartService: CartService
   ) {}
 
   ipSub: Subscription | null = new Subscription();
@@ -33,6 +35,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       localStorage.setItem('login', this.login);
       localStorage.setItem('password', this.password);
       this.name = this.login;
+      this.cartService.setUser(this.name, this.password);
       this.modalService.dismissAll();
     }
   }

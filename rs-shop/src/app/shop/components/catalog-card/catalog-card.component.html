@@ -29,7 +29,11 @@
     <button [disabled]="good.isFavourite" class="btn btn-outline-primary">
       В избранное
     </button>
-    <button [disabled]="good.isInCart" class="btn btn-outline-primary">
+    <button
+      (click)="getUserCarts()"
+      [disabled]="good.isInCart"
+      class="btn btn-outline-primary"
+    >
       В корзину
     </button>
   </div>

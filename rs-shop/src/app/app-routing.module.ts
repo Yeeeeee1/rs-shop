@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './shop/components/cart/cart.component';
 import { CatalogCardComponent } from './shop/components/catalog-card/catalog-card.component';
 import { CatalogComponent } from './shop/components/catalog/catalog.component';
 import { CategoryComponent } from './shop/components/category/category.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'items/:id', component: CatalogCardComponent },
   { path: 'category/:category/:subcategory', component: CategoryComponent },
+  { path: 'cart', component: CartComponent },
 ];
 
 @NgModule({

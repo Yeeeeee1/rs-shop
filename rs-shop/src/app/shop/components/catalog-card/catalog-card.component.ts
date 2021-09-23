@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 import { CatalogService } from '../../services/catalog.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class CatalogCardComponent implements OnInit {
   goods: any;
   constructor(
     private route: ActivatedRoute,
-    private catalogService: CatalogService
+    private catalogService: CatalogService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -26,5 +28,9 @@ export class CatalogCardComponent implements OnInit {
         });
       }
     });
+  }
+
+  getUserCarts(): void {
+    this.cartService.getUser();
   }
 }

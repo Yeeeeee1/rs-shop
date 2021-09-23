@@ -16,6 +16,7 @@ import { CatalogCardComponent } from './shop/components/catalog-card/catalog-car
 import { CategoryComponent } from './shop/components/category/category.component';
 import { PricePipe } from './shop/components/category/pipes/price.pipe';
 import { SearchWordPipe } from './shop/components/category/pipes/search-word.pipe';
+import { CartComponent } from './shop/components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SearchWordPipe } from './shop/components/category/pipes/search-word.pip
     CategoryComponent,
     PricePipe,
     SearchWordPipe,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
