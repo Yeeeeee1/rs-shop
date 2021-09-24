@@ -13,4 +13,10 @@ describe('CatalogService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('Should be called', () => {
+    spyOn(service, 'getCatalogProducts');
+    service.getCatalogProducts();
+    expect(service.getCatalogProducts).toHaveBeenCalled();
+  });
 });
