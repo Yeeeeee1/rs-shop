@@ -21,16 +21,13 @@ export class CatalogComponent implements OnInit {
       const id = param.id;
 
       if (id) {
-        console.log(id);
         this.catalogService.getGood(id).subscribe((data: any) => {
-          console.log(data);
           // data = data.json();
           this.goods = [data];
         });
       }
     });
     this.catalogService.getCatalogProducts().subscribe((data: any) => {
-      console.log(data);
       this.catalogs = data;
     });
   }

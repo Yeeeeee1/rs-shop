@@ -29,7 +29,6 @@ export class CategoryComponent implements OnInit {
           .getGoodsByCategory(category, subcategory)
           .subscribe((data: any) => {
             this.goods = data;
-            console.log(data);
           });
       }
     });

@@ -14,7 +14,6 @@ export class CatalogService {
   }
 
   getGoodsByCategory(category: string, subCategory: string): any {
-    console.log(this.baseUrl + 'category/' + category + '/' + subCategory);
     return this.api.get(
       this.baseUrl + 'goods/' + 'category/' + category + '/' + subCategory
     );
