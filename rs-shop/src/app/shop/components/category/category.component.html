@@ -1,0 +1,33 @@
+<app-catalog></app-catalog>
+
+<div class="sort-by-wrapper">
+  <p>Sort by:</p>
+  <button (click)="flag = !flag">Price</button>
+  <p>Search:</p>
+  <input
+    type="search"
+    name="filterByWord"
+    id="filterByWord"
+    [(ngModel)]="searchWord"
+  />
+</div>
+
+<div class="good-cards-wrapper">
+  <div
+    *ngFor="let currentGoods of goods | price: flag | searchWord: searchWord"
+    class="good-card"
+    [style.opacity]="currentGoods.availableAmount < 10 ? '0.5' : '1'"
+    (click)="
+      currentGoods.availableAmount < 10
+        ? notGood($event)
+        : getCard(currentGoods.id)
+    "
+  >
+    <img [src]="currentGoods.imageUrls[0]" alt="good-poster" />
+    <p>Price: {{ currentGoods.price }}</p>
+    <p>{{ currentGoods.name }}</p>
+    <p class="good-card__desc">{{ currentGoods.description }}</p>
+    <button class="btn btn-outline-info">В корзину</button>
+    <button class="btn btn-outline-info">В избранное</button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div *ngFor="let good of goods" class="catalog-card-wrapper">
+  <img
+    src="../../../../assets/hot-item.jpg"
+    *ngIf="good.rating === 5 || good.avaibleAmount > 15"
+    class="hot-item"
+    alt="hot-item"
+  />
+  <div class="breadcrumbs">
+    <a routerLink="/catalog">category</a>
+    <p>></p>
+    <a [routerLink]="'/category/' + good.category + '/' + good.subCategory">{{
+      good.category
+    }}</a>
+    <p>></p>
+    <p>{{ good.name }}</p>
+  </div>
+
+  <ngb-carousel id="carousel" #carousel [interval]="3000">
+    <ng-template ngbSlide *ngFor="let img of good.imageUrls; index as i">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <p>Цена: {{ good.price }}</p>
+  <h2>Описание:</h2>
+  <p class="catalog-card-wrapper__desc">{{ good.description }}</p>
+  <div>
+    <button [disabled]="good.isFavourite" class="btn btn-outline-primary">
+      В избранное
+    </button>
+    <button [disabled]="good.isInCart" class="btn btn-outline-primary">
+      В корзину
+    </button>
+  </div>
+</div>

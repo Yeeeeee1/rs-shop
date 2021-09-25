@@ -1,0 +1,24 @@
+main {
+  & div {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & p {
+      width: 60%;
+    }
+
+    & iframe {
+      width: 85%;
+      height: 400px;
+      margin: 25px 0 25px 0;
+    }
+
+    & h2 {
+      text-align: center;
+    }
+  }
+}

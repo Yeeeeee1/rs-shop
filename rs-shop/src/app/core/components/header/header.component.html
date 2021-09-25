@@ -1,0 +1,168 @@
+<header>
+  <div class="info-bar">
+    <div>
+      <div ngbDropdown class="d-inline-block">
+        <button
+          class="btn btn-outline-info shadow-none"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          {{ city }}
+        </button>
+        <div ngbDropdownMenu gray-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="changeCity('Минск')">Minsk</button>
+          <button ngbDropdownItem (click)="changeCity('Брест')">Brest</button>
+          <button ngbDropdownItem (click)="changeCity('Витебск')">
+            Vitebsk
+          </button>
+          <hr />
+          <p>Города где работаем</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-contacts-wrapper">
+      <div class="header-contacts">
+        <img src="../../../../../assets/viber-icon.png" alt="viber" />
+        <a href="viber://chat?number=%2B+375295687898" class="text-info"
+          >Viber</a
+        >
+        <img
+          src="../../../../../assets/velcom-icon.png"
+          alt="telephone-number"
+        />
+        <a href="tel:+375295687898" class="text-info">+375 29 568 7898</a>
+      </div>
+      <div ngbDropdown class="d-inline-block">
+        <button
+          class="btn btn-outline-info"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          Ещё
+        </button>
+        <div ngbDropdownMenu gray-labelledby="dropdownBasic1">
+          <a href="tel:+375259979955"
+            ><button ngbDropdownItem>
+              <img src="../../../../assets/life-icon.svg" alt="life-icon" />
+              +375 25 997 9955
+            </button>
+          </a>
+          <a href="telegram.me/@pahne_chabor">
+            <button ngbDropdownItem>
+              <img
+                src="../../../../assets/telegram-icon.png"
+                alt="telegram-icon"
+              />
+              Telegram
+            </button>
+          </a>
+          <a href="mailto:example@gmail.com"
+            ><button ngbDropdownItem>Написать нам</button>
+          </a>
+          <hr />
+          <p style="margin: 0 57px">Контакты</p>
+        </div>
+      </div>
+      <div class="work-time">
+        <p>Контакт-центр</p>
+        <p>с 8.00 до 20.00</p>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <a routerLink=""
+      ><img src="../../../../assets/21vek-icon.png" alt="shop-logo"
+    /></a>
+    <a routerLink="catalog">
+      <button class="btn btn-outline-info">Каталог</button>
+    </a>
+    <input
+      type="search"
+      name="search"
+      id="search"
+      placeholder="Поиск"
+      (input)="search($event)"
+    />
+
+    <a routerLink="cart">
+      <button class="btn btn-outline-info">Корзина</button>
+    </a>
+    <a routerLink="favourite">
+      <button class="btn btn-outline-info">Избранное</button>
+    </a>
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Войти</h4>
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Имя</p>
+        <input type="text" name="name" [(ngModel)]="login" />
+        <p>Пароль</p>
+        <input type="password" name="password" [(ngModel)]="password" />
+        <button class="btn btn-info" (click)="auth()">Войти</button>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-light"
+          (click)="modal.close('Close click')"
+        >
+          Закрыть
+        </button>
+      </div>
+    </ng-template>
+
+    <div>
+      <p>{{ name }}</p>
+    </div>
+
+    <button
+      class="btn btn-outline-info"
+      (click)="openSm(content)"
+      *ngIf="!name; else signOut"
+    >
+      Войти
+    </button>
+  </nav>
+
+  <ul class="popular">
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/appliances/refrigerators"
+        >Холодильники</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/appliances/dishwashers"
+        >Стиральные машины</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/computers-peripherals/laptops"
+        >Ноутбуки</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/electronics/mobile"
+        >Смартфоны</a
+      >
+    </li>
+    <li class="popular__item">
+      <a class="text-dark" routerLink="category/furniture/sofas">Диваны</a>
+    </li>
+  </ul>
+</header>
+
+<ng-template #signOut>
+  <button class="btn btn-danger" (click)="signOutFunc()">Выйти</button>
+</ng-template>

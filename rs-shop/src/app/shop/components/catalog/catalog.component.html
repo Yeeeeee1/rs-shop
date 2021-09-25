@@ -1,0 +1,22 @@
+<div class="catalog">
+  <div *ngFor="let catalog of catalogs">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        {{ catalog.name }}
+      </button>
+      <div ngbDropdownMenu gray-labelledby="dropdownBasic1">
+        <button
+          (click)="getGoodsByCategory(catalog.id, subcatalog.id)"
+          ngbDropdownItem
+          *ngFor="let subcatalog of catalog.subCategories"
+        >
+          {{ subcatalog.name }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
